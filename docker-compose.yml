@@ -7,8 +7,8 @@ services:
       - "5000:5000"
     depends_on:
       - postgres
-    volumes:
-      - ~/flask/app:/root/flask/app
+    #volumes:
+    #  - ~/flask/app:/root/flask/app
       
   postgres:
     image: postgres:10
