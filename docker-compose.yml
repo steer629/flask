@@ -1,12 +1,24 @@
 version: "3"
 services:
 
-  basic:
-    image: "flask"
+  flask:
+    image: flask:latest
     ports:
-      - "5000:5000"
+      - 5000:5000
+    depends_on:
+      - postgres
     volumes:
-      - "~/flask/app:/root/app"
-      - "~/flask/data:/root/app/data"
+      - ~/flask/app:/root/app
+      
+  postgres:
+    image: postgres:10
+    environment:
+      - POSTGRES_USER=testusr
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=testdb
+    volumes:
+      - ~/flask/app/data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
       
 
