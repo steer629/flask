@@ -2,23 +2,23 @@ version: "3"
 services:
 
   flask:
-    image: flask:latest
+    image: flask
     ports:
-      - 5000:5000
-    #depends_on:
-    #  - postgres
+      - "5000:5000"
+    depends_on:
+      - postgres
     volumes:
       - ~/flask/app:/root/flask/app
       
-  #postgres:
-  #  image: postgres:10
-  #  environment:
-  #    - POSTGRES_USER=testusr
-  #    - POSTGRES_PASSWORD=password
-  #    - POSTGRES_DB=testdb
-  #  volumes:
-  #    - ~/flask/app/data:/var/lib/postgresql/data
-  #  ports:
-  #    - 5432:5432
+  postgres:
+    image: postgres:10
+    environment:
+      - POSTGRES_USER=testusr
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=testdb
+    volumes:
+      - ~/flask/app/data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
       
 
