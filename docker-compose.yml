@@ -3,8 +3,8 @@ services:
 
   web:
     image: flask
-    ports:
-      - "5000:5000"
+    #ports:
+    #  - "5000:5000"
     #depends_on:
     #  - postgres
     #volumes:
