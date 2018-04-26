@@ -2,11 +2,11 @@ version: "3"
 services:
 
   basic:
-    image: "201803"
+    image: "flask"
     ports:
-      - "5901:5901"
+      - "5000:5000"
     volumes:
-      - "flask_volume:/root/app"
+      - "~/flask/app:/root/app"
+      - "~/flask/data:/root/app/data
       
-volumes:
-  flask_volume:
+
