@@ -8,7 +8,7 @@ services:
     depends_on:
       - postgres
     volumes:
-      - ~/flask/app:/root/app
+      - ~/flask/app:/root/flask/app
       
   postgres:
     image: postgres:10
@@ -19,6 +19,6 @@ services:
     volumes:
       - ~/flask/app/data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - 5432:5432
       
 
