@@ -18,7 +18,6 @@ RUN pip3 install setuptools
 RUN pip3 install Flask
 RUN pip3 install flask-sqlalchemy flask-script flask-bootstrap flask-mail
 
-EXPOSE 5000
 
 
 
