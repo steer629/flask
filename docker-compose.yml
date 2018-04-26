@@ -7,6 +7,6 @@ services:
       - "5000:5000"
     volumes:
       - "~/flask/app:/root/app"
-      - "~/flask/data:/root/app/data
+      - "~/flask/data:/root/app/data"
       
 
