@@ -10,7 +10,7 @@ services:
     #volumes:
     #  - ~/flask:/root/flask
     tty:
-      -true
+      - true
       
   #postgres:
   #  image: postgres:10
