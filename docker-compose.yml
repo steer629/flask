@@ -2,7 +2,7 @@ version: "3"
 services:
 
   web:
-    image: flask
+    image: "flask:latest"
     ports:
       - "5000:5000"
     depends_on:
