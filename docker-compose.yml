@@ -5,20 +5,20 @@ services:
     image: "flask:latest"
     ports:
       - "5000:5000"
-    depends_on:
-      - postgres
+    #depends_on:
+    #  - postgres
     #volumes:
     #  - ~/flask:/root/flask
       
-  postgres:
-    image: postgres:10
-    environment:
-      - POSTGRES_USER=testusr
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=testdb
-    volumes:
-      - ~/flask/app/data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+  #postgres:
+  #  image: postgres:10
+  #  environment:
+  #    - POSTGRES_USER=testusr
+  #    - POSTGRES_PASSWORD=password
+  #    - POSTGRES_DB=testdb
+  #  volumes:
+  #    - ~/flask/app/data:/var/lib/postgresql/data
+  #  ports:
+  #    - "5432:5432"
       
 
