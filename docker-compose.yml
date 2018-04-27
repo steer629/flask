@@ -7,6 +7,8 @@ services:
       - "5000:5000"
     depends_on:
       - postgres
+    links:
+      - postgres:postgres
     volumes:
       - ~/flask:/root/flask
     tty:
