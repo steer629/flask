@@ -16,7 +16,9 @@ RUN apt-get update \
 RUN pip3 install --upgrade pip 
 RUN pip3 install setuptools
 RUN pip3 install Flask
-RUN pip3 install flask-sqlalchemy flask-script flask-bootstrap flask-mail flask-wtf
+RUN pip3 install flask-sqlalchemy flask-script flask-bootstrap flask-mail flask-wtf pandas
+
+RUN alias python=python3
 
 EXPOSE 5000
 
