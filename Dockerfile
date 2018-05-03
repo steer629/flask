@@ -8,7 +8,7 @@ MAINTAINER steer629
 RUN apt-get update \
     && apt-get install -y --no-install-recommends software-properties-common curl\
     && apt-get install -y --no-install-recommends --allow-unauthenticated  apt-utils \
-        python3 python3-pip python3-dev build-essential lynx python3-psycopg2\
+        python3 python3-pip python3-dev build-essential lynx python3-psycopg2 python3-virtualenv\
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
