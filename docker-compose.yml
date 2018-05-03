@@ -10,7 +10,7 @@ services:
     links:
       - postgres:postgres
     volumes:
-      - ~/flask:/root/flask
+      - ~/YlqErp:/root/flask
     tty:
       true
       
@@ -21,7 +21,7 @@ services:
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=testdb
     volumes:
-      - ~/flask/app/data:/var/lib/postgresql/data
+      - ~/YlqErp/data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
       
