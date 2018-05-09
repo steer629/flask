@@ -16,7 +16,7 @@ RUN apt-get update \
 RUN pip3 install --upgrade pip 
 RUN pip3 install setuptools
 RUN pip3 install Flask
-RUN pip3 install flask-sqlalchemy flask-script flask-bootstrap flask-mail flask-wtf pandas virtualenv
+RUN pip3 install flask-sqlalchemy flask-script flask-bootstrap flask-mail flask-wtf pandas virtualenv psycopg2-binary
 
 RUN alias python=python3
 
