@@ -5,7 +5,6 @@ services:
     image: "flask:latest"
     ports:
       - "5000:5000"
-      - "8888:8888"
     depends_on:
       - postgres
     links:
