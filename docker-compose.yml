@@ -2,15 +2,15 @@ version: "3"
 services:
 
   web:
-    image: "flask:latest"
+    image: "tryton/tryton:latest"
     ports:
-      - "5000:5000"
+      - "8000:8000"
     depends_on:
       - postgres
     links:
       - postgres:postgres
     volumes:
-      - ~/YlqErp:/root/flask
+      - ~/tryton:/root/flask
     tty:
       true
       
@@ -21,7 +21,7 @@ services:
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=testdb
     volumes:
-      - ~/YlqErp/data:/var/lib/postgresql/data
+      - ~/tryton/data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
       
