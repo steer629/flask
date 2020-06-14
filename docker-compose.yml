@@ -11,8 +11,7 @@ services:
       - postgres:postgres
     volumes:
       - ~/tryton:/root
-    tty:
-      true
+    entrypoint: /entrypoint.sh trytond
       
   postgres:
     image: postgres:latest
