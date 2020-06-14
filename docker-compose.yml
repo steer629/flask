@@ -10,12 +10,12 @@ services:
     links:
       - postgres:postgres
     volumes:
-      - ~/tryton:/root/flask
+      - ~/tryton:/root
     tty:
       true
       
   postgres:
-    image: postgres:10
+    image: postgres:latest
     environment:
       - POSTGRES_USER=testusr
       - POSTGRES_PASSWORD=password
