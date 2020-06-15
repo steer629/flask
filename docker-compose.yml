@@ -10,7 +10,7 @@ services:
     links:
       - postgres:postgres
     volumes:
-      - ~/tryton/trytond:/var/lib/trytond
+      - ~/tryton/trytond:/var/lib/tryton
     entrypoint: /entrypoint.sh trytond
       
   postgres:
