@@ -44,7 +44,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Default environment for the server
 ENV TRYTOND_CONFIG=/etc/tryton/trytond.conf
-ENV TRYTOND_DATABASE_URI=postgres://
+ENV TRYTOND_DATABASE_URI=postgresql://
 ENV TRYTOND_DATA=/var/lib/tryton
 
 # Add a directory to process setup scripts for the container
