@@ -53,6 +53,7 @@ RUN mkdir /docker-entrypoint-init.d
 EXPOSE 	8000
 
 COPY docker-entrypoint.sh /
+COPY trytond.conf /etc/trytond
 RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
