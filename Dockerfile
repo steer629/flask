@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-MAINTAINER steer629
+FROM debian:stretch-slim
+MAINTAINER Mathias Behrle <mbehrle@m9s.biz>
 
 #ENV DEBIAN_FRONTEND noninteractive
 
