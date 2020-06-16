@@ -46,7 +46,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 	
 #install sao
-RUN npm -i tryton-sao
+RUN npm install tryton-sao
 
 # Default environment for the server
 ENV TRYTOND_CONFIG=/etc/tryton/trytond.conf
