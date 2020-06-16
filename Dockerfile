@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		ca-certificates \
 		gosu \
 		procps \
+		git \
 	&& curl -o /etc/apt/trusted.gpg.d/debian.tryton.org-archive.gpg -SL "https://debian.m9s.biz//debian/debian.tryton.org-archive.gpg" \
 	&& curl -o /etc/apt/sources.list.d/tryton-$T_DIST-$T_MAJOR.list https://debian.m9s.biz/debian/tryton-$T_DIST-$T_MAJOR.list \
 	&& curl -o /etc/apt/preferences.d/debian.tryton.org.pref -SL "https://debian.m9s.biz/debian/debian.tryton.org.pref" \
@@ -41,6 +42,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	vim \
 	unoconv \
 	&& rm -rf /var/lib/apt/lists/*
+
+RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+#install sao
+RUN npm -i tryton-sao
 
 # Default environment for the server
 ENV TRYTOND_CONFIG=/etc/tryton/trytond.conf
