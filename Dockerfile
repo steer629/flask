@@ -1,6 +1,5 @@
 
 FROM tryton/tryton:5.6
-LABEL tryton/tryton:latest
 
 COPY trytond.conf /etc/trytond.conf
 
