@@ -76,9 +76,9 @@ RUN pip3 install --no-cache-dir --install-option="-O1" \
         weasyprint
 
 COPY --from=builder-node /package /var/lib/trytond/www
-COPY entrypoint.sh /
-COPY trytond.conf /etc/trytond.conf
-COPY uwsgi.conf /etc/uwsgi.conf
+COPY .entrypoint.sh /
+COPY .trytond.conf /etc/trytond.conf
+COPY .uwsgi.conf /etc/uwsgi.conf
 
 EXPOSE 8000
 
