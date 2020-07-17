@@ -1,7 +1,7 @@
 
 FROM tryton/tryton:5.6
 
-#COPY trytond.conf /etc/trytond.conf
+COPY trytond.conf /etc/trytond.conf
 
 USER root
 
