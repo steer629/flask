@@ -6,7 +6,7 @@ MAINTAINER steer629
 
 # Set Tryton major variable for reuse
 ENV T_DIST bullseye
-ENV T_MAJOR 5.0
+ENV T_MAJOR 5.6
 
 # Setup environment and UTF-8 locale
 ENV DEBIAN_FRONTEND noninteractive
