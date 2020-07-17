@@ -1,6 +1,8 @@
 
 FROM tryton/tryton:5.6
-LABEL org.label-schema.version="5.6-office"
+LABEL tryton/tryton:latest
+
+COPY trytond.conf /etc/trytond.conf
 
 USER root
 
